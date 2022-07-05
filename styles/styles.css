@@ -48,7 +48,6 @@ ul {
 
 .container-fondo {
     padding:  7rem 0;
-    margin : 0 auto 1rem;
     max-width: 500rem;
     padding-bottom: 30rem;
     background-image: url("../images/foto-principal.jpg");
@@ -81,6 +80,13 @@ footer {
     ;
 }
 
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
 
 
 h1 {
@@ -105,8 +111,8 @@ body {
 }
 
 #telefono-logo {
-    max-width: 1.7rem;
-    max-height: 1.7rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
     padding: 0 0.5rem;
     vertical-align: middle;
 }
@@ -123,17 +129,10 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-}
-
-.menu-principal {
-    border: 1px #6c7983 solid
+    justify-content: flex-end;
 }
 
 .menu-principal li {
-    list-style-type: none;
-    cursor: pointer;
-    display: inline-block;
     padding: 0 1.3rem;
     font-size: 1.4rem;
 }
@@ -153,14 +152,14 @@ footer {
     padding: 0.3rem 0;
     text-align: left;
 }
-
+/*
 .informacion-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: left;
 }
-
+*/
 .informacion-footer ul {
     border-right: 2px whitesmoke solid;
 }
@@ -227,20 +226,14 @@ section img {
 .proceso-icon p {
     font-size: 1rem;
     color: #2eb887;
-    font-weight: bold;    
+    font-weight: bold;   
+    text-align: center; 
 }
 
 .proceso-icon img {
+    display: block;
+    margin: auto;
     max-width: 4rem;
-}
-
-.grid-proceso-mudanza {
-/*    grid-template-columns: repeat(11, 1fr); */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    text-align: center;
-    justify-content: center;
 }
 
 #flecha {
@@ -250,23 +243,14 @@ section img {
 
 #ubicacion {
 border: 0;
-margin: 0 2rem;
-width: 35%;
+width: 100%;
+height: 100%;
 }
 
 /* Sobre nosotros */
 
 h2{
     margin: 2rem 0 0 1rem;
-}
-
-.sobre-nosotros{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
 }
 
 .sobre-nosotros p{
@@ -280,17 +264,16 @@ h2{
 
 /*Nuestra historia*/
 
-.contenedor figure{
+.contenedor-imagen figure{
     position: relative;
 }
 
-.contenedor figure img {
-    min-width: 50rem;
-    min-height: 25rem;
+.contenedor-imagen figure img {
+    width: 100%;
     transition: all 100ms ease-out;
 }
 
-.contenedor figure .parrafo {
+.contenedor-imagen figure .parrafo {
     position: absolute;
     top: 0;
     width: 100%;
@@ -299,32 +282,28 @@ h2{
     transition: all 100ms ease-out;
     opacity: 0;
     visibility: hidden;
-    max-width: 50rem;
-    max-height: 30rem;
     color:white;
     cursor: pointer;
 
 }
 
-.contenedor figure:hover > .parrafo{
+.contenedor-imagen figure:hover > .parrafo{
     opacity: 1;
     visibility: visible;
 }
 
-.contenedor figure:hover > .parrafo p{
+.contenedor-imagen figure:hover > .parrafo p{
     color:white;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 
+.sobre-nosotros h2 {
+    margin-top: 1rem;
+    text-align: center;
+}
 
 /*Porque elegirnos */
 
-.porque-elegirnos{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
 .porque-elegirnos ul {
     margin: 2rem 0;
@@ -336,12 +315,8 @@ h2{
 }
 
 .metodos-pago{
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows:  3fr;
-    align-items: center;
-    text-align: center;
     margin: 2rem 0;
+    text-align: center;
 }
 
 
@@ -377,14 +352,6 @@ h2{
 
 /*Guardamuebles */
 
-.guardamuebles{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 .guardamuebles p {
     font-size: 25px;
     max-height: 500px;
@@ -408,8 +375,7 @@ h2{
 }
 
 #formulario-contacto {
-    display: flex;
-    flex-direction: column;
+    margin: 1rem;
     color: black;
     font-size: 1.2rem;
     border: 2px solid black;
@@ -420,6 +386,11 @@ h2{
 #formulario-contacto h1 {
     font-size: 2rem;
     padding: 0 0 0;
+    margin: 1rem;
+}
+
+.datos-formulario {
+    margin: 1rem;
 }
 
 #formulario-contacto p {
@@ -447,18 +418,18 @@ input {
 
 /*NO SE COMO HACER PARA CENTRAR EL BOTON!! LE PUSE TODAS LAS PROPIEDADES EN CENTER Y NO LO TOMA EN CUENTA */
 #boton-enviar {
-    display: flex;
     background-color:#6c7983;
     color:white;
     border: #6c7983bb;
     border-radius: 10%;
     padding: 1rem 2rem 1rem 2rem;
-    min-width: 10rem;
-    max-width: 5rem;
+    min-width: 8rem;
+    max-width: 10rem;
     cursor: pointer;
-    justify-content: center;
-    margin: 2rem;
+    margin: auto;
+    margin-bottom: 1rem;
     align-self: center;
+    text-align: center;
 }
 
 textarea {
@@ -467,113 +438,7 @@ textarea {
     margin: 0 2rem;
 }
 
-
-input#abrir-cerrar { 
-    visibility:hidden;
-    position: absolute;
-}
-
-/* RESPONSIVE */
-
-
 @media screen and (max-width:1610px) {
-
-    input#abrir-cerrar { 
-        visibility:hidden;
-        position: absolute;
-    }
-    
-    .toggle-button { /* ESTE ES EL BOTON SIN TOCAR */
-        display:block;
-        width:50px;
-        height:50px;
-        position:relative;
-        cursor: pointer;
-        box-sizing: border-box;
-
-    }
-    
-    /* Usamos los :before y :after del label para dibujar las tres rayitas */
-    
-    .toggle-button:before, .toggle-button:after {
-        position:absolute;
-        display:block;
-        content:" ";
-        width: calc(100% / 2);               
-        box-sizing: border-box;
-        left: calc(100% / 4);
-        transition: all 0.3s ease-out;
-    }
-    
-    .toggle-button:before {
-        top: calc(100% / 4);
-        height:calc(100% / 4);
-        border-top:1px solid rgb(255, 255, 255);
-        border-bottom:1px solid rgb(255, 255, 255);
-        background-color: transparent;
-    }
-    
-    .toggle-button:after {
-        height:1px;
-        background-color:rgb(255, 255, 255);
-        bottom:calc(100% / 4);
-    }
-    
-    /* Hacemos clic y el input queda como :checked, así que los centramos y giramos 45º en distinto sentido */
-    
-    input#abrir-cerrar:checked + .toggle-button:before, input#abrir-cerrar:checked + .toggle-button:after {
-        top:calc(100% / 2);
-        height:1px;
-        border-bottom:0;
-    }
-    
-    input#abrir-cerrar:checked + .toggle-button:before {
-        transform: rotate(45deg); 
-    }
-    
-    input#abrir-cerrar:checked + .toggle-button:after {
-        transform: rotate(-45deg);
-    }
-    
-    /* Posicionamos y mostramos cuando procede los <span> que nos ayudarán con los tooltips */
-    
-    
-    .abrir {
-        position:relative;
-        display:none;
-        margin: 4rem 0rem 0rem -7.5rem;
-    
-    }
-    
-    .menu-navegacion {
-        display: grid;
-        grid-template-columns: 15% auto 40%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-items: center;
-    }
-    
-    #telefono-item-lista li {
-    text-align: right;
-    }
-
-    #enlaces-nav li {
-        display: block;
-        min-width: 13rem;
-        margin: 0.5rem 0 0.5rem 0;
-        text-align: center;
-    }
-
-    .abrir {
-        background-color: #6c7983;
-        min-width: 16rem;
-    }
-    
-    input#abrir-cerrar:checked + .toggle-button .abrir {
-        display:block;
-    }
-
 
     .horario-atencion {
         display: none;
@@ -583,204 +448,60 @@ input#abrir-cerrar {
         display: none;
     }
 
-    .informacion-footer {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: left;
+    #logo-perotti-footer{
+        width: 20rem;
     }
 
-    .sobre-nosotros{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        align-items: start;
-        justify-items: center;
-        justify-content: center;
-        }
-
-    .sobre-nosotros h2 {
-        text-align: center;
-        margin: 2rem 0rem;
+    .informacion-footer ul {
+        border-right: none;
     }
 
-    .contenedor figure img {
-        min-width: 100%;
-        min-height: 100%;
-        transition: all 100ms ease-out;
-    }
-    
-    .contenedor figure .parrafo {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(108, 121, 131,0.6);
-        transition: all 100ms ease-out;
-        opacity: 0;
-        visibility: hidden;
-        color:white;
-        cursor: pointer;
-        padding: 0rem;
-    
-    }
-    
-    .contenedor {
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
+    .info-contacto li{
+        white-space: nowrap;
     }
 
 
     .sobre-nosotros p{
-        color: white;
+        font-size: 20px;
+    }
+    
+
+}
+
+@media screen and (max-width:1350px) {
+    .sobre-nosotros p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .sobre-nosotros p{
         font-size: 25px;
-        margin-left: 30px;
-    }
-    
-    /*Nuestra historia*/
-    
-    .contenedor figure{
-        position: relative;
-    }
-    
-    .contenedor figure img {
-        width: 40%;
-        height: 40%;
-        transition: all 100ms ease-out;
-    }
-    
-    .contenedor figure .parrafo {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(108, 121, 131,0.6);
-        transition: all 100ms ease-out;
-        opacity: 0;
-        visibility: hidden;
-        color:white;
-        cursor: pointer;
-        padding: 0rem;
     }
 }
 
-@media screen and (max-width:500px) {
-
-        .menu-navegacion {
-            display: grid;
-            grid-template-columns: 15% auto;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-items: center;
-        }
-
-        #telefono-item-lista {
-            display: none;
-        }
-
-        #logo-perotti{
-            margin: 0rem 0rem 0rem 2.5rem;
-        }
-        
-        #ubicacion {
-            width: 75%;
-            height: 75%;
-        }
-
-        .guardamuebles{
-            display: grid;
-            grid-template-rows: 3fr 1fr;
-            grid-template-columns: 100%;
-            align-items: start;
-        }
+@media screen and (max-width:850px) {
+    .sobre-nosotros p{
+        font-size: 20px;
+    }
 }
 
-@media screen and (max-width:550px) {
-
-    .grid-proceso-mudanza {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: center;
-        justify-items: center;
-        justify-content: center;
+@media screen and (max-width:700px) {
+    .sobre-nosotros p{
+        font-size: 15px;
     }
+}
 
-    .espacio-vacio {
+
+@media screen and (max-width:750px) {
+
+    #logo-perotti-footer{
         display: none;
     }
 }
 
 
-@media screen and (max-width:1000px) {
-
-    .guardamuebles{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 100%;
-        align-items: start;
-    }
-}
-
-
-@media screen and (max-width:800px) {
-
-    .sobre-nosotros p{
-        color: white;
-        font-size: 15px;
-        margin-left: 30px;
-    }
-    
-    .porque-elegirnos{
-        display: grid;
-        grid-template-columns: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .porque-elegirnos ul {
-        margin: 2rem 0;
-    }
-    .porque-elegirnos li {
-        color:black;
-        margin: 1rem;
-        font-size: 1.2rem;
-    }
-    
-    .imagenes-porque-elegirnos{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 1rem;
-    }
-    
-    .imagenes-porque-elegirnos p {
-        font-size: 1rem;
-        color: #2eb887;
-        font-weight: bold;    
-    }
-
-}
-
-
-@media screen and (max-width:600px) {
-
-    .sobre-nosotros h2 {
-        margin-top: 3rem;
-    }
+@media screen and (max-width:550px) {
 
     .contenedor figure{
         position: static;
@@ -792,7 +513,7 @@ input#abrir-cerrar {
         max-width: 50rem;
         max-height: 30rem;
         color:rgb(0, 0, 0);  
-        background-color: whitesmoke;
+        background-color: rgb(255, 255, 255);
         visibility: visible;
         opacity: 1;
         padding: 0rem;
@@ -813,4 +534,16 @@ input#abrir-cerrar {
         font-size: 1rem;
     }
 
+}
+
+@media screen and (max-width:450px) {
+
+    .info-contacto{
+        display: none;
+    }
+    
+    #ubicacion {
+    margin-left: -10rem;
+    width: 17rem;
+    }
 }
