@@ -5,6 +5,22 @@
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 
+
+$estilos: (
+    color-fondo: whitesmoke   
+);
+
+/* ESTA CLASE ES LA DE EXTENDS */
+.logos-proceso {
+    max-width: 4rem;
+ }
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+
 html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -71,7 +87,7 @@ html {
  }
  
  .index-container {
-     background-color: whitesmoke;
+     background-color: map-get(color-fondo);
      display: grid;
      grid-template-columns: 10% 25% 25% auto;
      grid-template-rows: auto 800px 500px;
@@ -98,7 +114,7 @@ html {
  }
  
  body {
-     background-color: whitesmoke;
+     background-color: map-get(color-fondo);
  }
  
  /*Header y footer */
@@ -171,7 +187,7 @@ html {
  .informacion-footer {
 
     ul {
-        border-right: 2px whitesmoke solid;
+        border-right: 2px map-get(color-fondo) solid;
     }   
  }
  
@@ -243,8 +259,7 @@ html {
  /* TODO ESTO ES PROCESO DE MUDANZA -> ICONOS */
  
  section img {
-     width: 4rem;
-     height: 4rem;
+    @include sizes(4rem, 4rem);
  }
  
  .proceso-icon p {
@@ -255,20 +270,19 @@ html {
  }
  
  .proceso-icon img {
+    @extend .logos-proceso;
      display: block;
      margin: auto;
-     max-width: 4rem;
  }
  
  #flecha {
-     max-width: 4rem;
+    @extend .logos-proceso;
      min-width: 0.5rem;
  }
  
  #ubicacion {
  border: 0;
- width: 100%;
- height: 100%;
+ @include sizes(100%, 100%);
  }
  
  /* Sobre nosotros */
@@ -303,8 +317,7 @@ html {
         .parrafo {
             position: absolute;
             top: 0;
-            width: 100%;
-            height: 100%;
+            @include sizes(100%, 100%);
             background: rgba(108, 121, 131,0.6);
             transition: all 100ms ease-out;
             opacity: 0;
@@ -376,8 +389,7 @@ html {
  }
  
  .logo {
-     width: 60%;
-     height: 60%;
+    @include sizes(60%, 60%);
  }
  
  /*Guardamuebles */
@@ -391,8 +403,7 @@ html {
  }
  
  .imagen-guardamuebles {
-     width: 100%;
-     height: 100%;
+    @include sizes(100%, 100%);
  }
  
  /* Formulario de Contacto */
@@ -463,8 +474,7 @@ html {
  }
  
  textarea {
-     width: 95%;
-     height: 15rem;
+    @include sizes(95%, 15rem);
      margin: 0 2rem;
  }
  
