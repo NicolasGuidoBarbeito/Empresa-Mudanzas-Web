@@ -87,7 +87,7 @@ html {
  }
  
  .index-container {
-     background-color: map-get(color-fondo);
+     background-color: map-get($estilos, color-fondo);
      display: grid;
      grid-template-columns: 10% 25% 25% auto;
      grid-template-rows: auto 800px 500px;
@@ -114,14 +114,14 @@ html {
  }
  
  body {
-     background-color: map-get(color-fondo);
+     background-color: map-get($estilos, color-fondo);
  }
  
  /*Header y footer */
  
  .header-footer {
 
-     background: $backgroundGrey3;
+     background: $backgroundGrey;
     
      a {
         text-decoration: none; /*ESTO ES PARA QUE LOS LINKS NO APAREZCAN AZULES Y CON _*/
@@ -187,7 +187,7 @@ html {
  .informacion-footer {
 
     ul {
-        border-right: 2px map-get(color-fondo) solid;
+        border-right: 2px map-get($estilos, color-fondo) solid;
     }   
  }
  
@@ -258,22 +258,27 @@ html {
  
  /* TODO ESTO ES PROCESO DE MUDANZA -> ICONOS */
  
- section img {
-    @include sizes(4rem, 4rem);
+ section {
+    img{
+        @include sizes(4rem, 4rem);
+    }
  }
  
- .proceso-icon p {
-     font-size: 1rem;
-     color: #2eb887;
-     font-weight: bold;   
-     text-align: center; 
+ .proceso-icon {
+    p {
+        font-size: 1rem;
+        color: #2eb887;
+        font-weight: bold;   
+        text-align: center; 
+    }
+
+    img {
+        @extend .logos-proceso;
+         display: block;
+         margin: auto;
+     }
  }
  
- .proceso-icon img {
-    @extend .logos-proceso;
-     display: block;
-     margin: auto;
- }
  
  #flecha {
     @extend .logos-proceso;
@@ -281,8 +286,8 @@ html {
  }
  
  #ubicacion {
- border: 0;
- @include sizes(100%, 100%);
+    border: 0;
+    @include sizes(100%, 100%);
  }
  
  /* Sobre nosotros */
@@ -299,6 +304,11 @@ html {
         max-height: 500px;
         max-width: 1200px;
         margin-left: 30px;
+    }
+
+    h2 {
+        margin-top: 1rem;
+        text-align: center;
     }
  }
  
@@ -338,35 +348,31 @@ html {
         }
     }
 }
-
-
- .sobre-nosotros h2 {
-     margin-top: 1rem;
-     text-align: center;
- }
  
  /*Porque elegirnos */
  
  
- .porque-elegirnos ul {
+.porque-elegirnos {
+    ul {
      margin: 2rem 0;
- }
- .porque-elegirnos li {
-     color:black;
-     margin: 1rem;
-     font-size: 1.2rem;
- }
+    }
+
+    li {
+        color:black;
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
+}
  
- .metodos-pago{
+ .metodos-pago {
      margin: 2rem 0;
      text-align: center;
- }
- 
- 
- .metodos-pago p {
-     font-size: 1rem;
-     color: #2eb887;
-     font-weight: bold;    
+
+     p {
+        font-size: 1rem;
+        color: #2eb887;
+        font-weight: bold;    
+    }
  }
  
  .imagenes-porque-elegirnos{
@@ -380,13 +386,14 @@ html {
      justify-content: center;
      text-align: center;
      margin: 1rem;
+
+     p {
+        font-size: 1rem;
+        color: #2eb887;
+        font-weight: bold;    
+    }
  }
  
- .imagenes-porque-elegirnos p {
-     font-size: 1rem;
-     color: #2eb887;
-     font-weight: bold;    
- }
  
  .logo {
     @include sizes(60%, 60%);
@@ -394,12 +401,13 @@ html {
  
  /*Guardamuebles */
  
- .guardamuebles p {
+ .guardamuebles {
+    p {
      font-size: 25px;
      max-height: 500px;
      max-width: 1200px;
      margin-left: 30px;
- 
+    }
  }
  
  .imagen-guardamuebles {
@@ -421,31 +429,30 @@ html {
      font-size: 1.2rem;
      border: 2px solid black;
      border-radius: 3%;
- 
+
+     h1 {
+        font-size: 2rem;
+        padding: 0 0 0;
+        margin: 1rem;
+    }
+
+    p {
+        margin: 1rem;
+    }
+
+    label {
+        margin: 0.5rem;
+        text-align: left;
+        font-weight: bold;
+    }
  }
- 
- #formulario-contacto h1 {
-     font-size: 2rem;
-     padding: 0 0 0;
-     margin: 1rem;
- }
- 
+  
  .datos-formulario {
      margin: 1rem;
  }
  
- #formulario-contacto p {
-     margin: 1rem;
- }
- 
- #formulario-contacto label {
-     margin: 0.5rem;
-     text-align: left;
-     font-weight: bold;
- }
- 
  #campos-requeridos {
-     color: $backgroundGrey3;
+     color: $backgroundGrey;
      font-weight:inherit;
      font-style: italic;
      margin-left: 5rem;
@@ -457,11 +464,10 @@ html {
      margin: 0 2rem;
  }
  
- /*NO SE COMO HACER PARA CENTRAR EL BOTON!! LE PUSE TODAS LAS PROPIEDADES EN CENTER Y NO LO TOMA EN CUENTA */
  #boton-enviar {
-     background-color:$backgroundGrey3;
+     background-color: $backgroundGrey;
      color:white;
-     border: $backgroundGrey3bb;
+     border: $backgroundGrey;
      border-radius: 10%;
      padding: 1rem 2rem 1rem 2rem;
      min-width: 8rem;
@@ -492,44 +498,57 @@ html {
          width: 20rem;
      }
  
-     .informacion-footer ul {
+     .informacion-footer {
+        ul {
          border-right: none;
-     }
- 
-     .info-contacto li{
+        }
+    }
+
+     .info-contacto {
+        li{
          white-space: nowrap;
-     }
+        }
+    }
  
- 
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          font-size: 20px;
-     }
+        }
+    }
      
  
  }
  
  @media screen and (max-width:1350px) {
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          font-size: 15px;
-     }
+        }
+    }
  }
  
  @media screen and (max-width:1200px) {
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          font-size: 25px;
-     }
+        }
+    }
  }
  
  @media screen and (max-width:850px) {
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          font-size: 20px;
-     }
+        }
+    }
  }
  
  @media screen and (max-width:700px) {
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          font-size: 15px;
-     }
+        }
+    }
  }
  
  
@@ -543,36 +562,43 @@ html {
  
  @media screen and (max-width:550px) {
  
-     .contenedor figure{
+     .contenedor {
+        figure {
          position: static;
-     }
+
+        .parrafo {
+            position: static;
+            opacity: 0;
+            max-width: 50rem;
+            max-height: 30rem;
+            color:rgb(0, 0, 0);  
+            background-color: rgb(255, 255, 255);
+            visibility: visible;
+            opacity: 1;
+            padding: 0rem;
+            }
+
+
+        &:hover > .parrafo p{
+                color:black;
+                padding: 0rem;
+            }    
+        }
+    }
+          
      
-     .contenedor figure .parrafo {
-         position: static;
-         opacity: 0;
-         max-width: 50rem;
-         max-height: 30rem;
-         color:rgb(0, 0, 0);  
-         background-color: rgb(255, 255, 255);
-         visibility: visible;
-         opacity: 1;
-         padding: 0rem;
-     }
-     
-     
-     .sobre-nosotros p{
+     .sobre-nosotros {
+        p{
          color: black;
          font-size: 1rem;
-     }
-     
-     .contenedor figure:hover > .parrafo p{
-         color:black;
-         padding: 0rem;
-     }
- 
-     .guardamuebles p{
+        }
+    }
+      
+     .guardamuebles {
+        p{
          font-size: 1rem;
-     }
+        }
+    }
  
  }
  

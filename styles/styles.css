@@ -1,157 +1,148 @@
+@charset "UTF-8";
 /**
 * 1. Correct the line height in all browsers.
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
+/* ESTA CLASE ES LA DE EXTENDS */
+.logos-proceso, #flecha, .proceso-icon img {
+  max-width: 4rem;
+}
 
 html {
-   line-height: 1.15; /* 1 */
-   -webkit-text-size-adjust: 100%; /* 2 */
- }
- 
- /* Sections
-    ========================================================================== */
- 
- /**
-  * Remove the margin in all browsers.
-  */
- 
- body {
-   margin: 0;
- }
- 
- /**
-  * Render the `main` element consistently in IE.
-  */
- 
- main {
-   display: block;
- }
- 
- /**
-  * Correct the font size and margin on `h1` elements within `section` and
-  * `article` contexts in Chrome, Firefox, and Safari.
-  */
- 
- h1 {
-   font-size: 2em;
-   margin: 0.67em 0;
- }
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
 * {
-    font-family: Geneva, sans-serif;
+  font-family: Geneva, sans-serif;
 }
 
 ul {
-    color: white;
+  color: white;
 }
 
 .container-fondo {
-    padding:  7rem 0;
-    max-width: 500rem;
-    padding-bottom: 30rem;
-    background-image: url("../images/foto-principal.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  padding: 7rem 0;
+  max-width: 500rem;
+  padding-bottom: 30rem;
+  background-image: url("../images/foto-principal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {
-    grid-area: header;
+  grid-area: header;
 }
 
 main {
-    grid-area: main;
+  grid-area: main;
 }
 
 footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
 .index-container {
-    background-color: whitesmoke;
-    display: grid;
-    grid-template-columns: 10% 25% 25% auto;
-    grid-template-rows: auto 800px 500px;
-    grid-template-areas: 
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer"
-    ;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 10% 25% 25% auto;
+  grid-template-rows: auto 800px 500px;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
 }
 
 .navbar-collapse {
-    text-align: center;
+  text-align: center;
 }
 
-.navbar-toggler-icon{
-    color: white;
+.navbar-toggler-icon {
+  color: white;
 }
-
 
 h1 {
-    text-align: center;
-    color: black;
-    padding-bottom: 1rem;
+  text-align: center;
+  color: black;
+  padding-bottom: 1rem;
 }
 
 body {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 /*Header y footer */
-
 .header-footer {
-    background: #6c7983;
+  background: #6c7983;
 }
-
 .header-footer a {
-    text-decoration: none; /*ESTO ES PARA QUE LOS LINKS NO APAREZCAN AZULES Y CON _*/
-    color: white;
+  text-decoration: none; /*ESTO ES PARA QUE LOS LINKS NO APAREZCAN AZULES Y CON _*/
+  color: white;
 }
 
 #telefono-logo {
-    max-width: 2.5rem;
-    max-height: 2.5rem;
-    padding: 0 0.5rem;
-    vertical-align: middle;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  padding: 0 0.5rem;
+  vertical-align: middle;
 }
 
 #logo-perotti {
-    max-width: 10rem;
-    max-height: 5rem;
+  max-width: 10rem;
+  max-height: 5rem;
 }
 
 /*Menú principal -> Barra de navegación */
-
 .menu-navegacion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .menu-principal li {
-    padding: 0 1.3rem;
-    font-size: 1.4rem;
+  padding: 0 1.3rem;
+  font-size: 1.4rem;
 }
 
 #telefono-item-lista {
-    text-align: center ;
+  text-align: center;
 }
 
 #enlaces-nav {
-    text-align: right;
+  text-align: right;
 }
-
 
 /* Styles de Footer */
-
 footer {
-    padding: 0.3rem 0;
-    text-align: left;
+  padding: 0.3rem 0;
+  text-align: left;
 }
+
 /*
 .informacion-footer {
     display: flex;
@@ -161,389 +152,331 @@ footer {
 }
 */
 .informacion-footer ul {
-    border-right: 2px whitesmoke solid;
+  border-right: 2px whitesmoke solid;
 }
 
-
-footer h2{
-    text-align: center;
-    font-weight:normal;
-    font-style: italic;
-    font-family:'Times New Roman', Times, serif;
-    color: white;
-    font-size: 1.7rem;
-    margin: 1rem 0;
+footer h2 {
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 1.7rem;
+  margin: 1rem 0;
 }
 
 .titulo-lista {
-    font-weight: bold ;
+  font-weight: bold;
 }
 
-
-.informacion-footer li{
-    margin : 1rem 0;
-    padding-right: 3rem;
+.informacion-footer li {
+  margin: 1rem 0;
+  padding-right: 3rem;
 }
 
-
-.info-contacto li{
-    list-style-type: none;
+.info-contacto li {
+  list-style-type: none;
 }
 
-#logo-perotti-footer{
-    width: 85%;
+#logo-perotti-footer {
+  width: 85%;
 }
 
-.icono-footer{
-    max-width: 1.5rem;
-    vertical-align: middle;
-    margin: 0 0.5rem 0.5rem 0;
+.icono-footer {
+  max-width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.5rem 0.5rem 0;
 }
 
 #domingo {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
 
-
-.enlaces-rapidos li{
-    margin : 1rem 0;
-    cursor: pointer;
-    list-style-type: disc;
+.enlaces-rapidos li {
+  margin: 1rem 0;
+  cursor: pointer;
+  list-style-type: disc;
 }
 
-#contacto-logo{
-    margin: 0 2rem;
+#contacto-logo {
+  margin: 0 2rem;
 }
 
 /* TODO ESTO ES PROCESO DE MUDANZA -> ICONOS */
-
 section img {
-    width: 4rem;
-    height: 4rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .proceso-icon p {
-    font-size: 1rem;
-    color: #2eb887;
-    font-weight: bold;   
-    text-align: center; 
+  font-size: 1rem;
+  color: #2eb887;
+  font-weight: bold;
+  text-align: center;
 }
-
 .proceso-icon img {
-    display: block;
-    margin: auto;
-    max-width: 4rem;
+  display: block;
+  margin: auto;
 }
 
 #flecha {
-    max-width: 4rem;
-    min-width: 0.5rem;
+  min-width: 0.5rem;
 }
 
 #ubicacion {
-border: 0;
-width: 100%;
-height: 100%;
+  border: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* Sobre nosotros */
-
-h2{
-    margin: 2rem 0 0 1rem;
+h2 {
+  margin: 2rem 0 0 1rem;
 }
 
-.sobre-nosotros p{
-    color: white;
-    font-size: 25px;
-    max-height: 500px;
-    max-width: 1200px;
-    margin-left: 30px;
+.sobre-nosotros p {
+  color: white;
+  font-size: 25px;
+  max-height: 500px;
+  max-width: 1200px;
+  margin-left: 30px;
 }
-
+.sobre-nosotros h2 {
+  margin-top: 1rem;
+  text-align: center;
+}
 
 /*Nuestra historia*/
-
-.contenedor-imagen figure{
-    position: relative;
+.contenedor-imagen figure {
+  position: relative;
 }
-
 .contenedor-imagen figure img {
-    width: 100%;
-    transition: all 100ms ease-out;
+  width: 100%;
+  transition: all 100ms ease-out;
 }
-
 .contenedor-imagen figure .parrafo {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(108, 121, 131,0.6);
-    transition: all 100ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    color:white;
-    cursor: pointer;
-
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(108, 121, 131, 0.6);
+  transition: all 100ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  cursor: pointer;
 }
-
-.contenedor-imagen figure:hover > .parrafo{
-    opacity: 1;
-    visibility: visible;
+.contenedor-imagen figure:hover > .parrafo {
+  opacity: 1;
+  visibility: visible;
 }
-
-.contenedor-imagen figure:hover > .parrafo p{
-    color:white;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
-}
-
-.sobre-nosotros h2 {
-    margin-top: 1rem;
-    text-align: center;
+.contenedor-imagen figure:hover > .parrafo p {
+  color: white;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 
 /*Porque elegirnos */
-
-
 .porque-elegirnos ul {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 .porque-elegirnos li {
-    color:black;
-    margin: 1rem;
-    font-size: 1.2rem;
+  color: black;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
-.metodos-pago{
-    margin: 2rem 0;
-    text-align: center;
+.metodos-pago {
+  margin: 2rem 0;
+  text-align: center;
 }
-
-
 .metodos-pago p {
-    font-size: 1rem;
-    color: #2eb887;
-    font-weight: bold;    
+  font-size: 1rem;
+  color: #2eb887;
+  font-weight: bold;
 }
 
-.imagenes-porque-elegirnos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  1fr;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 1rem;
+.imagenes-porque-elegirnos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
 }
-
 .imagenes-porque-elegirnos p {
-    font-size: 1rem;
-    color: #2eb887;
-    font-weight: bold;    
+  font-size: 1rem;
+  color: #2eb887;
+  font-weight: bold;
 }
 
 .logo {
-    width: 60%;
-    height: 60%;
+  height: 60%;
+  width: 60%;
 }
 
 /*Guardamuebles */
-
 .guardamuebles p {
-    font-size: 25px;
-    max-height: 500px;
-    max-width: 1200px;
-    margin-left: 30px;
-
+  font-size: 25px;
+  max-height: 500px;
+  max-width: 1200px;
+  margin-left: 30px;
 }
 
 .imagen-guardamuebles {
-    width: 100%;
-    height: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 /* Formulario de Contacto */
-
 .contacto {
-    color: black;
-    justify-content: center;
-    margin: 2rem;
-    align-items: center;
+  color: black;
+  justify-content: center;
+  margin: 2rem;
+  align-items: center;
 }
 
 #formulario-contacto {
-    margin: 1rem;
-    color: black;
-    font-size: 1.2rem;
-    border: 2px solid black;
-    border-radius: 3%;
-
+  margin: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 3%;
 }
-
 #formulario-contacto h1 {
-    font-size: 2rem;
-    padding: 0 0 0;
-    margin: 1rem;
+  font-size: 2rem;
+  padding: 0 0 0;
+  margin: 1rem;
+}
+#formulario-contacto p {
+  margin: 1rem;
+}
+#formulario-contacto label {
+  margin: 0.5rem;
+  text-align: left;
+  font-weight: bold;
 }
 
 .datos-formulario {
-    margin: 1rem;
-}
-
-#formulario-contacto p {
-    margin: 1rem;
-}
-
-#formulario-contacto label {
-    margin: 0.5rem;
-    text-align: left;
-    font-weight: bold;
+  margin: 1rem;
 }
 
 #campos-requeridos {
-    color: #6c7983;
-    font-weight:inherit;
-    font-style: italic;
-    margin-left: 5rem;
+  color: #6c7983;
+  font-weight: inherit;
+  font-style: italic;
+  margin-left: 5rem;
 }
 
 input {
-    text-align: left;
-    width: 95%;
-    margin: 0 2rem;
+  text-align: left;
+  width: 95%;
+  margin: 0 2rem;
 }
 
-/*NO SE COMO HACER PARA CENTRAR EL BOTON!! LE PUSE TODAS LAS PROPIEDADES EN CENTER Y NO LO TOMA EN CUENTA */
 #boton-enviar {
-    background-color:#6c7983;
-    color:white;
-    border: #6c7983bb;
-    border-radius: 10%;
-    padding: 1rem 2rem 1rem 2rem;
-    min-width: 8rem;
-    max-width: 10rem;
-    cursor: pointer;
-    margin: auto;
-    margin-bottom: 1rem;
-    align-self: center;
-    text-align: center;
+  background-color: #6c7983;
+  color: white;
+  border: #6c7983;
+  border-radius: 10%;
+  padding: 1rem 2rem 1rem 2rem;
+  min-width: 8rem;
+  max-width: 10rem;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 1rem;
+  align-self: center;
+  text-align: center;
 }
 
 textarea {
-    width: 95%;
-    height: 15rem;
-    margin: 0 2rem;
+  height: 15rem;
+  width: 95%;
+  margin: 0 2rem;
 }
 
-@media screen and (max-width:1610px) {
-
-    .horario-atencion {
-        display: none;
-    }
-
-    .enlaces-rapidos {
-        display: none;
-    }
-
-    #logo-perotti-footer{
-        width: 20rem;
-    }
-
-    .informacion-footer ul {
-        border-right: none;
-    }
-
-    .info-contacto li{
-        white-space: nowrap;
-    }
-
-
-    .sobre-nosotros p{
-        font-size: 20px;
-    }
-    
-
+@media screen and (max-width: 1610px) {
+  .horario-atencion {
+    display: none;
+  }
+  .enlaces-rapidos {
+    display: none;
+  }
+  #logo-perotti-footer {
+    width: 20rem;
+  }
+  .informacion-footer ul {
+    border-right: none;
+  }
+  .info-contacto li {
+    white-space: nowrap;
+  }
+  .sobre-nosotros p {
+    font-size: 20px;
+  }
 }
-
-@media screen and (max-width:1350px) {
-    .sobre-nosotros p{
-        font-size: 15px;
-    }
+@media screen and (max-width: 1350px) {
+  .sobre-nosotros p {
+    font-size: 15px;
+  }
 }
-
-@media screen and (max-width:1200px) {
-    .sobre-nosotros p{
-        font-size: 25px;
-    }
+@media screen and (max-width: 1200px) {
+  .sobre-nosotros p {
+    font-size: 25px;
+  }
 }
-
-@media screen and (max-width:850px) {
-    .sobre-nosotros p{
-        font-size: 20px;
-    }
+@media screen and (max-width: 850px) {
+  .sobre-nosotros p {
+    font-size: 20px;
+  }
 }
-
-@media screen and (max-width:700px) {
-    .sobre-nosotros p{
-        font-size: 15px;
-    }
+@media screen and (max-width: 700px) {
+  .sobre-nosotros p {
+    font-size: 15px;
+  }
 }
-
-
-@media screen and (max-width:750px) {
-
-    #logo-perotti-footer{
-        display: none;
-    }
+@media screen and (max-width: 750px) {
+  #logo-perotti-footer {
+    display: none;
+  }
 }
-
-
-@media screen and (max-width:550px) {
-
-    .contenedor figure{
-        position: static;
-    }
-    
-    .contenedor figure .parrafo {
-        position: static;
-        opacity: 0;
-        max-width: 50rem;
-        max-height: 30rem;
-        color:rgb(0, 0, 0);  
-        background-color: rgb(255, 255, 255);
-        visibility: visible;
-        opacity: 1;
-        padding: 0rem;
-    }
-    
-    
-    .sobre-nosotros p{
-        color: black;
-        font-size: 1rem;
-    }
-    
-    .contenedor figure:hover > .parrafo p{
-        color:black;
-        padding: 0rem;
-    }
-
-    .guardamuebles p{
-        font-size: 1rem;
-    }
-
+@media screen and (max-width: 550px) {
+  .contenedor figure {
+    position: static;
+  }
+  .contenedor figure .parrafo {
+    position: static;
+    opacity: 0;
+    max-width: 50rem;
+    max-height: 30rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    visibility: visible;
+    opacity: 1;
+    padding: 0rem;
+  }
+  .contenedor figure:hover > .parrafo p {
+    color: black;
+    padding: 0rem;
+  }
+  .sobre-nosotros p {
+    color: black;
+    font-size: 1rem;
+  }
+  .guardamuebles p {
+    font-size: 1rem;
+  }
 }
-
-@media screen and (max-width:450px) {
-
-    .info-contacto{
-        display: none;
-    }
-    
-    #ubicacion {
+@media screen and (max-width: 450px) {
+  .info-contacto {
+    display: none;
+  }
+  #ubicacion {
     margin-left: -10rem;
     width: 17rem;
-    }
-}
+  }
+}/*# sourceMappingURL=styles.css.map */
