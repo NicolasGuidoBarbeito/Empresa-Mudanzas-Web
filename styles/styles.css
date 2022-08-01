@@ -33,9 +33,12 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
+ h1 {
+  font-size: 2em !important;
   margin: 0.67em 0;
+  font-weight: bold !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 * {
@@ -233,6 +236,9 @@ section img {
 /* Sobre nosotros */
 h2 {
   margin: 2rem 0 0 1rem;
+  font-weight: bold !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .sobre-nosotros p {
@@ -423,12 +429,47 @@ textarea {
   .sobre-nosotros p {
     font-size: 15px;
   }
+
+  .nav-link{
+    font-size: 20px !important;
+  }
 }
+
+
+@media screen and (max-width: 1250px) {
+
+  .nav-link{
+    font-size: 18px !important;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .sobre-nosotros p {
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 1190px) {
+
+  .nav-link{
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .nav-link{
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+
+  .nav-link{
+    font-size: 20px !important;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .sobre-nosotros p {
     font-size: 20px;
@@ -492,4 +533,10 @@ textarea {
 
 :root {
   --bs-link-hover-color: black !important;
-} /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;    
+}
+
+/*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */

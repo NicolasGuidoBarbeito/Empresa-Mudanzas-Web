@@ -51,8 +51,9 @@ html {
    */
   
   h1 {
-    font-size: 2em;
+    font-size: 2em !important;
     margin: 0.67em 0;
+    font-weight: bold !important;
   }
  
  
@@ -525,7 +526,19 @@ html {
          font-size: 15px;
         }
     }
- }
+    .nav-link{
+        font-size: 20px !important;
+      }
+}
+    
+    
+@media screen and (max-width: 1250px) {
+    
+      .nav-link{
+        font-size: 18px !important;
+      }
+    }
+    
  
  @media screen and (max-width:1200px) {
      .sobre-nosotros {
@@ -534,6 +547,27 @@ html {
         }
     }
  }
+
+ @media screen and (max-width: 1190px) {
+
+    .nav-link{
+      font-size: 15px !important;
+    }
+  }
+  
+  @media screen and (max-width: 1100px) {
+  
+    .nav-link{
+      font-size: 13px !important;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+  
+    .nav-link{
+      font-size: 20px !important;
+    }
+  }
  
  @media screen and (max-width:850px) {
      .sobre-nosotros {
@@ -627,4 +661,9 @@ html {
 
   :root {
     --bs-link-hover-color: black !important;
+    }
+.navbar-expand-lg .navbar-collapse {
+        display: flex!important;
+        flex-basis: auto;
+        justify-content: flex-end;    
   }/*# sourceMappingURL=styles.css.map */
